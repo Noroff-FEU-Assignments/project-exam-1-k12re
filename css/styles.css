@@ -1,0 +1,72 @@
+:root {
+    --light-mode-bg: #fff;
+    --light-mode-cta: #57015C;
+    --light-mode-cta-hover: #91018C;
+    --dark-mode-bg: #000;
+    --dark-mode-cta: #AEFF75;
+    --dark-mode-cta-hover: #94ED55;
+    --h1-size: 40px;
+    --h2-size: 30px;
+    --h3-size: 26px; 
+    --p-size: 20px;
+    --p-post-author: 16px;
+    --heading-font: "Montserrat";
+    --p-font: "Roboto"; 
+    --light-font: #fff;
+    --dark-font: #000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo, .menu-button {
+    max-height: 57px;
+    flex: 2;
+    width: 100%;
+}
+
+nav, nav a, nav ul {
+    font-family: var(--heading-font);
+    font-size: var(--h1-size);
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+    text-align: end;
+}
+
+nav ul {
+    position: relative;
+    /*left: 180px;*/
+}
+
+nav a:hover {
+    display: block;
+    font-weight: 700;
+    /*transform: translateY(10px);*/
+}
+
+.menu-button:hover ~ nav ul {
+    background-color: #000;
+    transform: translateX(50px)
+}
+
+body {
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    max-width: 100%;
+}
+
+.cta {
+    background-color: var(--light-mode-cta);
+    color: var(--light-font);
+    padding: 10px 50px;
+    min-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.wp-block-quote {
+    font-style: italic;
+}
