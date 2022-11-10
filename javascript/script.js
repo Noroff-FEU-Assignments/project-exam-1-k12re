@@ -4,7 +4,6 @@ const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
 const postsContainer = document.querySelector(".posts-slim");
 
-
  
 
 async function callAPI() {
@@ -54,4 +53,3 @@ function renderPosts(results) {
 };
 
 renderPosts();
-

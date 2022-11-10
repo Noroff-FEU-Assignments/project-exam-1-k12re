@@ -26,6 +26,7 @@
     max-height: 57px;
     flex: 2;
     width: 100%;
+    cursor: pointer;
 }
 
 nav, nav a, nav ul {
@@ -39,19 +40,29 @@ nav, nav a, nav ul {
 
 nav ul {
     position: relative;
-    /*left: 180px;*/
+    left: 50px;
 }
 
-nav a:hover {
+#menu {
+    display: none;
+}
+
+.menu a:hover {
     display: block;
     font-weight: 700;
     /*transform: translateY(10px);*/
 }
 
-.menu-button:hover ~ nav ul {
-    background-color: #000;
-    transform: translateX(50px)
+.menu {
+    transform: translateX(-40px);
+    transition: transform 0.2s ease-in-out;
 }
+
+#menu:checked ~ .menu {
+    background-color: #000;
+}
+
+
 
 body {
     font-family: 'Roboto', 'Montserrat', sans-serif;
