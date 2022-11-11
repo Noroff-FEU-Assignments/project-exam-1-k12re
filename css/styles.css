@@ -16,6 +16,12 @@
     --dark-font: #000;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -39,12 +45,12 @@ nav, nav a, nav ul {
 }
 
 nav ul {
-    position: relative;
+    /* position: relative; */
     left: 50px;
 }
 
 #menu {
-    display: none;
+    
 }
 
 .menu a:hover {
@@ -65,6 +71,7 @@ nav ul {
 
 
 body {
+    margin: 0 auto;
     font-family: 'Roboto', 'Montserrat', sans-serif;
     max-width: 100%;
 }
@@ -80,4 +87,22 @@ body {
 
 .wp-block-quote {
     font-style: italic;
+}
+
+.latest-big {
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+.latest-big img {
+    max-width: 100%;
+}
+
+.posts-slim {
+    margin: 0px auto;
+    max-width: 360px;
+}
+
+.card-slim img{
+    max-width: 100%;
 }
