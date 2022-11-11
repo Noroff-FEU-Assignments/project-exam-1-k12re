@@ -3,8 +3,11 @@ const postsContainer = document.querySelector(".post-content");
 const queryString = document.location.search;
 let param = new URLSearchParams(queryString);
 let id = parseInt (param.get("id"));
+let mediaId 
+
 
 const newUrl = "https://autotech.kenthore.no/wp-json/wp/v2/posts/" + id;
+const mediaUrl = "https://autotech.kenthore.no/wp-json/wp/v2/media/";
 
 async function renderPost() {
     
