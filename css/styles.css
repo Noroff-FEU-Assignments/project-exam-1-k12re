@@ -45,30 +45,36 @@ nav, nav a, nav ul {
 }
 
 nav ul {
-    /* position: relative; */
-    left: 50px;
+    background-color: #fff;
 }
 
 #menu {
-    
+    display: none;
 }
-
-.menu a:hover {
+ .menu a:hover {
     display: block;
     font-weight: 700;
-    /*transform: translateY(10px);*/
 }
 
 .menu {
-    transform: translateX(-40px);
-    transition: transform 0.2s ease-in-out;
+    margin-top: 50px;
+    background-color: #fff;
 }
 
-#menu:checked ~ .menu {
-    background-color: #000;
-}
-
-
+.menu {
+    position: fixed; 
+    right: 0px;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .menu {
+    transform: translateX(220px);
+  }
+  
+  #menu:checked ~ .menu {
+    transform: translateX(0px);
+    
+  }
 
 body {
     margin: 0 auto;

@@ -15,6 +15,10 @@ async function callAPI() {
     renderLatest(results);
     renderPosts(results);
 
+    results.forEach(thing => {
+        console.log(thing)
+        
+    });
     
     
 };
@@ -36,6 +40,8 @@ function renderLatest(results) {
 
 
 };
+
+
 
 
 
