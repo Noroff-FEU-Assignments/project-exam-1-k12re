@@ -22,6 +22,20 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-font);
+}
+
+figure {
+    margin: 0 auto;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -29,10 +43,13 @@
 }
 
 .logo, .menu-button {
+    position: relative;
+    z-index: 1000;
     max-height: 57px;
     flex: 2;
     width: 100%;
     cursor: pointer;
+    background-color: #fff;
 }
 
 nav, nav a, nav ul {
@@ -62,6 +79,7 @@ nav ul {
 }
 
 .menu {
+    z-index: 1000;
     position: fixed; 
     right: 0px;
     transition: transform 0.1s ease-in-out;
@@ -81,6 +99,19 @@ body {
     font-family: 'Roboto', 'Montserrat', sans-serif;
     max-width: 100%;
 }
+
+.header-big {
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.heading-card {
+    z-index: 900;
+    position: relative;
+    top: 0px
+}
+
+
 
 .cta {
     background-color: var(--light-mode-cta);
@@ -109,6 +140,39 @@ body {
     max-width: 360px;
 }
 
-.card-slim img{
-    max-width: 100%;
+.card-slim:hover {
+    background-color: #fafafa;
 }
+
+.card-slim {
+    display: grid;
+}
+
+.card-slim h2 {
+    grid-area: 1 / 1;
+    z-index: 1000;
+    background-color: #fff;
+    max-height: 40px;
+    max-width: fit-content;
+    padding: 6px;
+}
+
+.card-slim img {
+    max-width: 100%;
+    grid-area: 2 / 2 / 1 / 1;
+}
+
+.card-slim .post-author {
+    grid-area: 2 / 2 / 1 / 1;
+    align-self: end;
+    max-height: 30px;
+    max-width: fit-content;
+    background-color: #fff;
+    padding: 4px;
+}
+
+.card-slim .excerpt {
+    display: none;
+}
+
+
