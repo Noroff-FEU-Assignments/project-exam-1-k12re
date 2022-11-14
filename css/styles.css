@@ -146,6 +146,7 @@ body {
 
 .card-slim {
     display: grid;
+    object-fit: contain;
 }
 
 .card-slim h2 {
@@ -160,6 +161,7 @@ body {
 .card-slim img {
     max-width: 100%;
     grid-area: 2 / 2 / 1 / 1;
+    /* max-height: 180px; */
 }
 
 .card-slim .post-author {
@@ -171,8 +173,6 @@ body {
     padding: 4px;
 }
 
-.card-slim .excerpt {
-    display: none;
-}
+
 
 
