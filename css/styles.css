@@ -68,7 +68,8 @@ nav ul {
 #menu {
     display: none;
 }
- .menu a:hover {
+
+.menu a:hover {
     display: block;
     font-weight: 700;
 }
@@ -83,22 +84,26 @@ nav ul {
     position: fixed; 
     right: 0px;
     transition: transform 0.1s ease-in-out;
-  }
+}
   
-  .menu {
+.menu {
     transform: translateX(220px);
-  }
+}
   
-  #menu:checked ~ .menu {
+#menu:checked ~ .menu {
     transform: translateX(0px);
     
-  }
+}
 
 body {
+    max-width: 1000px;
+    /* Change to 1640px  */
     margin: 0 auto;
     font-family: 'Roboto', 'Montserrat', sans-serif;
-    max-width: 100%;
+    
 }
+
+
 
 .header-big {
     min-height: 600px;
@@ -106,20 +111,22 @@ body {
 }
 
 .heading-card {
+    display: grid;
     z-index: 900;
     position: relative;
     top: 0px
 }
 
-
-
 .cta {
+    display: flex;
     background-color: var(--light-mode-cta);
     color: var(--light-font);
-    padding: 10px 50px;
-    min-height: 50px;
+    margin: 20px 60px;
+    padding: 12px 0px;
+    /* min-height: 50px; */
     text-transform: uppercase;
     text-decoration: none;
+    justify-content: center;
 }
 
 .wp-block-quote {
@@ -149,7 +156,7 @@ body {
     object-fit: contain;
 }
 
-.card-slim h2 {
+.card-slim h2, .heading-card h2 {
     grid-area: 1 / 1;
     z-index: 1000;
     background-color: #fff;
@@ -158,7 +165,11 @@ body {
     padding: 6px;
 }
 
-.card-slim img {
+.heading-card h2 {
+    margin-top: 70px;
+}
+
+.card-slim img, .heading-card img {
     max-width: 100%;
     grid-area: 2 / 2 / 1 / 1;
     /* max-height: 180px; */
@@ -173,6 +184,41 @@ body {
     padding: 4px;
 }
 
+.carousel {
+    margin: 20px 0px;
+    object-fit: contain;
+    object-position: 0%; 
+    max-height: 250px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 80vw);
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    scroll-snap-type: both mandatory;
+}
 
 
 
+@media screen and (min-width: 1001px) {
+    .navigation {
+        z-index: 1000;
+        position: fixed;
+        max-width: 100%;
+    }
+
+    .menu-button {
+        left: 650px;
+    }
+    
+    main {
+        padding: 0px 207px
+    }
+
+    .latest-big {
+        padding: 0px 207px;
+    }
+
+    .posts-slim {
+        max-width: 720px;
+    }
+}
