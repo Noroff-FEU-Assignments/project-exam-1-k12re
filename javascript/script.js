@@ -2,6 +2,8 @@ const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?per_page=20&_embed
 const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
 const postsContainer = document.querySelector(".posts-slim");
+const leftButton = document.querySelector(".left-btn");
+const rightButton = document.querySelector(".right-btn");
 
 //const mediaUrl = `https://autotech.kenthore.no/wp-json/wp/v2/posts/129?_embed`
 
@@ -48,9 +50,10 @@ function renderCarousel(results) {
     
     for (let i = 1; i <= 3; i++) {
         carouselContainer.innerHTML += `<a class="card-slim carousel" href="post.html?id=${results[i].id}">
-                                    <h2 class="h2">${results[i].title.rendered}</h2>
-                                    <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
-                                    <p class="post-author">${results[i]._embedded.author[0].name}</p>`
+                                        <h2 class="h2">${results[i].title.rendered}</h2>
+                                        <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
+                                        <p class="post-author">${results[i]._embedded.author[0].name}</p>
+                                        `
     };
     
 
@@ -81,3 +84,10 @@ function renderPosts(results) {
     };
     postsContainer.innerHTML += `<a class="cta" href="posts-list.html">all posts</a>`;
 };
+
+
+function moveCarousel() {
+    leftButton.addEventListener("click", left => carouselContainer.style.transform = "translateX(-33%)") {
+
+    }
+}

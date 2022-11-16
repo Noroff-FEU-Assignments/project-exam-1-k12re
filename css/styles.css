@@ -186,16 +186,39 @@ body {
 }
 
 .carousel {
-    margin: 20px 0px;
-    object-fit: contain;
+    margin: 20px auto;
+    object-fit: cover;
     object-position: 0%; 
     max-height: 250px;
-    max-width: 100%;
+    max-width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 80vw);
     grid-template-rows: 1fr;
-    overflow: hidden;
+    overflow: scroll;
     scroll-snap-type: both mandatory;
+}
+
+.carousel img {
+    max-height: 250px;
+}
+
+.arrow {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-left: 10px solid var(--light-mode-cta);
+    border-top: 10px solid var(--light-mode-cta);
+}
+
+.left-btn {
+    transform: rotate(-45deg);
+    margin: 10px;
+}
+
+.right-btn {
+    transform: rotate(135deg);
+    margin: 10px;
 }
 
 
