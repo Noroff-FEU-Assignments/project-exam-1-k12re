@@ -4,30 +4,27 @@ const carouselContainer = document.querySelector(".carousel");
 const postsContainer = document.querySelector(".posts-slim");
 const leftButton = document.querySelector(".left-btn");
 const rightButton = document.querySelector(".right-btn");
+const buttons = document.querySelector(".arrow-buttons");
 
 //const mediaUrl = `https://autotech.kenthore.no/wp-json/wp/v2/posts/129?_embed`
 
 async function callAPI() {
     const response = await fetch(url);
     const results = await response.json();
-    
-    //const mediaResponse = await fetch(mediaUrl);
-    //const mediaResults = await mediaResponse.json();
 
-    renderLatest(results);
-    renderCarousel(results);
-    renderPosts(results);
+     renderLatest(results);
+     renderCarousel(results);
+     renderPosts(results);
     
-
     // results.forEach(thing => {
     //     console.log(thing)
         
     // });
-    
-    
 };
 
+
 callAPI();
+
 
 function renderLatest(results) {
     
@@ -56,20 +53,14 @@ function renderCarousel(results) {
                                         `
     };
     
-
+    
 };
 
 
 function renderPosts(results) {
 
-    console.log(results);
-
     postsContainer.innerHTML = "";
-
-
-
-         
-
+ 
     for (let i = 4; i <= 6; i++) {
         
         // const date = results[i].date;
@@ -86,8 +77,31 @@ function renderPosts(results) {
 };
 
 
-function moveCarousel() {
-    leftButton.addEventListener("click", left => carouselContainer.style.transform = "translateX(-33%)") {
 
-    }
-}
+    // card.src = carouselContainer[0];
+    // let position = 0;
+
+
+    // const left = () => {
+    //     if (position >= carouselContainer.length - 1) {
+    //         position = 0
+    //         card.src = carouselContainer[position];
+    //         return;
+    //     }
+    //     card.src = carouselContainer[position + 1];
+    //     position++;
+    // }
+
+    // const right = () => {
+    //     if (position < 1) {
+    //         position = carouselContainer.length - 1;
+    //         card.src = carouselContainer[position];
+    //         return;
+    //     }
+    //     card.src = carouselContainer[position - 1];
+    //     position--;
+    // };
+
+    // leftButton.addEventListener("click", left);
+    // rightButton.addEventListener("click", right);
+    

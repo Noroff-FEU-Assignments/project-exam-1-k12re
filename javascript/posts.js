@@ -1,6 +1,6 @@
 const postsContainer = document.querySelector(".posts-card");
 
-function renderPosts(results) {
+function renderPostsList(results) {
 
     console.log(results);
 
