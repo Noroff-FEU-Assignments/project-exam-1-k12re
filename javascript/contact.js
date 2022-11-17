@@ -1,7 +1,7 @@
 const pageUrl = "https://autotech.kenthore.no/wp-json/wp/v2/pages";
 const pageContainer = document.querySelector(".page")
 
-async function callAbout() {
+async function callContact() {
     const response = await fetch(pageUrl);
     const results = await response.json();
 
@@ -9,9 +9,9 @@ async function callAbout() {
 
      pageContainer.innerHTML = "";
 
-     pageContainer.innerHTML = `<h2 class="h2">${results[1].title.rendered}</h2>
-                                <p>${results[1].content.rendered}</p>`
+     pageContainer.innerHTML = `<h2 class="h2">${results[0].title.rendered}</h2>
+                                <p>${results[0].content.rendered}</p>`
 };
 
 
-callAbout();
+callContact();

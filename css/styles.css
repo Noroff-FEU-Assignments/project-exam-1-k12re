@@ -162,7 +162,7 @@ body {
 
 .card-slim h2, .heading-card h2 {
     grid-area: 1 / 1;
-    z-index: 1000;
+    z-index: 999;
     background-color: #fff;
     max-height: 40px;
     max-width: fit-content;
@@ -254,7 +254,7 @@ body {
     }
 
     .menu {
-        transform: translateX(600px);
+        transform: translateX(800px);
         margin-top: 10px;
         z-index: 1000;
     }
@@ -265,7 +265,7 @@ body {
     .menu-button {
         left: 650px;
         z-index: 10000;
-        padding-right: 200px;
+        padding-right: 300px;
     }
 
     .menu li {
