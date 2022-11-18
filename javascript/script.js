@@ -16,6 +16,9 @@ async function callAPI() {
      renderCarousel(results);
      renderPosts(results);
     
+
+     console.log(results);
+     
     // results.forEach(thing => {
     //     console.log(thing)
         

@@ -7,9 +7,9 @@ async function callContact() {
 
      console.log(results);
 
-     pageContainer.innerHTML = "";
+     pageContainer.innerHTML += "";
 
-     pageContainer.innerHTML = `<h2 class="h2">${results[0].title.rendered}</h2>
+     pageContainer.innerHTML += `<h2 class="h2">${results[0].title.rendered}</h2>
                                 <p>${results[0].content.rendered}</p>`
 };
 
