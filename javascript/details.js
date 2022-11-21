@@ -1,12 +1,6 @@
 const postContainer = document.querySelector(".post-content");
 const modal = document.getElementById("myModal");
-// const img = document.getElementById("myImg");
 const modalImg = document.getElementById("img01");
-
-
-
-//https://autotech.kenthore.no/wp-content/uploads/2022/11/herson-rodriguez-w8CcH9Md4vE-unsplash-1024x683.jpg
-
 
 const queryString = document.location.search;
 let param = new URLSearchParams(queryString);
@@ -14,7 +8,6 @@ let id = parseInt (param.get("id"));
 
 const newUrl = "https://autotech.kenthore.no/wp-json/wp/v2/posts/" + id;
 const mediaUrl = "https://autotech.kenthore.no/wp-json/wp/v2/media/";
-
 
 async function renderPost() {
     
@@ -26,13 +19,7 @@ async function renderPost() {
     postContainer.innerHTML = `<h2 class="h2">${results.title.rendered}</h2>
                                 <p>${results.content.rendered}</p>`
 
-    const imgSrc = document.querySelectorAll("figure img");
-
-    console.log(imgSrc)
-    console.log(imgSrc[0].currentSrc)
-
-    const testImageUrl = imgSrc[0].currentSrc
-    
+    const imgSrc = document.querySelectorAll("figure img");    
 
     for (let i = 0; i < imgSrc.length; i++) {
         imgSrc[i].onclick = function() {
@@ -45,7 +32,6 @@ async function renderPost() {
                 modal.style.display = "none"};
         }
     };
-
 
 };
 renderPost();
