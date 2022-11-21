@@ -1,13 +1,12 @@
 const postContainer = document.querySelector(".post-content");
 const modal = document.getElementById("myModal");
-const modalImg = document.getElementById("img01");
+const modalImg = document.getElementById("modalImg");
 
 const queryString = document.location.search;
 let param = new URLSearchParams(queryString);
 let id = parseInt (param.get("id"));
 
 const newUrl = "https://autotech.kenthore.no/wp-json/wp/v2/posts/" + id;
-const mediaUrl = "https://autotech.kenthore.no/wp-json/wp/v2/media/";
 
 async function renderPost() {
     
@@ -32,6 +31,8 @@ async function renderPost() {
                 modal.style.display = "none"};
         }
     };
+    
+    console.log(modalImg.src)
 
 };
 renderPost();

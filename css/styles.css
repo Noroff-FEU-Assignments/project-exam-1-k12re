@@ -193,8 +193,14 @@ button {
     padding: 4px;
 }
 
+/* .card-slim .carousel a {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+} */
+
 .carousel {
-    margin: 20px auto;
+    margin: 0px auto;
     object-fit: cover;
     object-position: 0%; 
     max-height: 250px;
@@ -298,7 +304,6 @@ button {
     position: fixed;
     padding-top: 100px;
     backdrop-filter: blur(10px) brightness(20%);
-    
     background-blend-mode: color;
     top: 0px;
     left: 0px;
