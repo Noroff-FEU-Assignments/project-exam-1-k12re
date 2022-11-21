@@ -19,10 +19,7 @@ async function callAPI() {
 
      console.log(results);
      
-    // results.forEach(thing => {
-    //     console.log(thing)
-        
-    // });
+
 };
 
 

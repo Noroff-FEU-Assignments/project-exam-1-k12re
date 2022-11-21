@@ -1,6 +1,6 @@
 const postContainer = document.querySelector(".post-content");
 const modal = document.getElementById("myModal");
-const img = document.getElementById("myImg");
+// const img = document.getElementById("myImg");
 const modalImg = document.getElementById("img01");
 
 
@@ -20,35 +20,37 @@ async function renderPost() {
     
     const response = await fetch(newUrl);
     const results = await response.json();
-
-    console.log(results);
     
     postContainer.innerHTML = "";
 
     postContainer.innerHTML = `<h2 class="h2">${results.title.rendered}</h2>
                                 <p>${results.content.rendered}</p>`
 
+    const imgSrc = document.querySelectorAll("figure img");
 
-    // modal.innerHTML = `<div class="img01"><img src=${results._links["wp:featuredmedia"][0].href}</div>`
+    console.log(imgSrc)
+    console.log(imgSrc[0].currentSrc)
 
+    const testImageUrl = imgSrc[0].currentSrc
     
+
+    for (let i = 0; i < imgSrc.length; i++) {
+        imgSrc[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = imgSrc[i].currentSrc;
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"};
+        }
+    };
+
+
 };
 renderPost();
 
-console.log(modal);
-console.log(img);
-console.log(modalImg);
 
 
-
-
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none"};
-}
+    
 
