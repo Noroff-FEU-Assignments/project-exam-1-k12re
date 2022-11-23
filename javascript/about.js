@@ -13,5 +13,4 @@ async function callAbout() {
                                 <p>${results[1].content.rendered}</p>`
 };
 
-
 callAbout();

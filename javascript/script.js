@@ -36,7 +36,7 @@ function renderCarousel(results) {
 
     carouselContainer.innerHTML = "";
     
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= 4; i++) {
         carouselContainer.innerHTML += `<a class="card-slim carousel-element" href="post.html?id=${results[i].id}">
                                         <h2 class="h2">${results[i].title.rendered}</h2>
                                         <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
@@ -49,7 +49,7 @@ function renderPosts(results) {
 
     postsContainer.innerHTML = "";
  
-    for (let i = 4; i <= 6; i++) {
+    for (let i = 5; i <= 7; i++) {
         
         // const date = results[i].date;
         // if (date.length < 10) date = date.substring(0, 10);
