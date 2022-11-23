@@ -207,8 +207,8 @@ button {
 .carousel {
     margin: 0px auto;
     object-fit: cover;
-    /* object-position: 0%;  */
-    height: 250px;
+    object-position: 0%; 
+    height: 200px;
     max-width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 100%);
@@ -226,7 +226,7 @@ button {
 
 .carousel img {
     max-height: 100%;
-    max-width: 100%;
+    min-width: 100%;
     object-fit: cover;
     object-position: top;
 }
@@ -243,7 +243,7 @@ button {
 .arrow-buttons {
     position: relative;
     z-index: 800;
-    top: -140px;
+    top: -120px;
     display: flex;
     justify-content: space-between;
 }
