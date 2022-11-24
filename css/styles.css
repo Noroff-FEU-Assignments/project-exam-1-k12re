@@ -231,8 +231,10 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 100%);
     grid-template-rows: 1fr;
-    overflow: scroll;
+    overflow: hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: both mandatory;
+    -webkit-overflow-scrolling: hidden;
 }
 
 .carousel-element {
@@ -420,6 +422,7 @@ margin: 0px auto;
         left: 650px;
         z-index: 10000;
         padding-right: 300px;
+        overflow: hidden;
     }
 
     .menu li {
