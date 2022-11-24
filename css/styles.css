@@ -238,7 +238,14 @@ button {
     overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
-    -webkit-overflow-scrolling: hidden;
+    /* -webkit-overflow-scrolling: hidden; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .carousel-element {
