@@ -231,7 +231,7 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 100%);
     grid-template-rows: 1fr;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
     -webkit-overflow-scrolling: hidden;
