@@ -80,7 +80,7 @@ nav ul {
 }
 
 .menu {
-    margin-top: 50px;
+    margin-top: 67px;
     background-color: #fff;
 }
 
@@ -231,7 +231,7 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 100%);
     grid-template-rows: 1fr;
-    overflow: hidden;
+    overflow: scroll;
     scroll-behavior: smooth;
 }
 
@@ -308,12 +308,32 @@ button {
 }
 
 .req {
-    color: #57015C;
+    color: darkred;
+    display: none;
+    
+}
+
+.req-ok {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border-left: 4px solid #5BA12A;
+    border-bottom: 4px solid #5BA12A;
+    transform: rotate(-45deg);
+    grid-area: 1 / 1;
+    position: relative;
+    top: -20px;
+    left: 315px;
     display: none;
 }
+
+label {
+    padding-top: 10px;
+}
+
 input, textarea {
     padding: 4px;
-    margin: 14px 0px;
+    /* margin: 14px 0px; */
 }
 
 .contact-form {
