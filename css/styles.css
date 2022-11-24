@@ -214,6 +214,9 @@ button {
     padding: 4px;
 }
 
+.card-slim {
+    overflow: hidden;
+}
 
 
 .card-slim .carousel a {
@@ -252,6 +255,7 @@ button {
 }
 
 .carousel img {
+    
     max-height: 100%;
     min-width: 100%;
     object-fit: cover;
