@@ -453,7 +453,7 @@ margin: 0px auto;
 
     #menu:checked ~ .menu {
         /* transform: translateX(-35%); */
-        transform: translateX(-50%);
+        transform: translateX(-52%);
     }
     
     main {
