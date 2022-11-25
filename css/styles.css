@@ -70,6 +70,12 @@ nav ul {
     background-color: #fff;
 }
 
+.sub-nav {
+    position: relative;
+    z-index: 1000;
+    top: 135px;
+}
+
 #menu {
     display: none;
 }
@@ -298,6 +304,10 @@ button {
     margin: 10px;
 }
 
+.sub-nav {
+    left: 25px;
+}
+
 .page h2, .post-content h2 {
     position: absolute;
     margin-top: 70px;
@@ -457,7 +467,16 @@ margin: 0px auto;
         /* transform: translateX(-35%); */
         transform: translateX(-50%);
     }
-    
+
+    .sub-nav {
+        top: 132px;
+        left: 205px;
+        height: 24px;
+        width: 24px;
+        border-left: 8px solid var(--light-mode-cta);
+        border-top: 8px solid var(--light-mode-cta);
+    }
+
     main {
         padding: 0px 207px
     }
@@ -472,6 +491,7 @@ margin: 0px auto;
 
     .heading-card h2, .page h2, .post-content h2 {
         margin-left: 0px;
+        padding-left: 80px ;
     }
 
  

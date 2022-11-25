@@ -14,6 +14,7 @@ const textareaReq = document.querySelector("#textarea-req");
 const textareaReqOk = document.querySelector(".textarea-req-ok");
 const contactForm = document.querySelector(".contact-form")
 
+
 async function callContact() {
     const response = await fetch(pageUrl);
     const results = await response.json();
