@@ -49,7 +49,7 @@ figure {
 
 .logo, .menu-button {
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
     max-height: 57px;
     flex: 2;
     width: 100%;
@@ -239,8 +239,8 @@ button {
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
     /* -webkit-overflow-scrolling: hidden; */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    /* scrollbar-width: none;
+    -ms-overflow-style: none; */
 }
 
 .carousel::-webkit-scrollbar {
@@ -424,6 +424,8 @@ margin: 0px auto;
 
     .menu {
         transform: translateX(800px);
+        left: 600px;
+        /* transform: translateX(100px); */
         margin-top: 10px;
         z-index: 1000;
     }
@@ -434,7 +436,7 @@ margin: 0px auto;
     .menu-button {
         left: 650px;
         z-index: 10000;
-        padding-right: 300px;
+        padding-right: 600px;
         overflow: hidden;
     }
 
@@ -446,11 +448,12 @@ margin: 0px auto;
     .menu ul {
         padding: 0px;
         margin: 0px;
+        max-width: 100%;
     }
 
     #menu:checked ~ .menu {
-        transform: translateX(-35%);
-        
+        /* transform: translateX(-35%); */
+        transform: translateX(-50%);
     }
     
     main {
