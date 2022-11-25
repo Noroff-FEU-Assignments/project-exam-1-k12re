@@ -478,12 +478,17 @@ margin: 0px auto;
     }
 
     main {
-        padding: 0px 207px
+        padding: 16px 207px
     }
 
     .latest-big {
-        padding: 0px 207px;
+        padding: 64px 207px
     }
+
+    .no-padding {
+        padding: 0px 207px; 
+    }
+
 
     .posts-slim {
         max-width: 720px;
