@@ -308,13 +308,14 @@ button {
 
 .avatar {
     max-height: 100px;
-    display: grid;
+    display: flex;
     align-items: center;
 }
 
 .avatar img {
     object-fit: contain;
-    max-width: 60px;
+    height: 60px;
+    width: 60px;
 }
 
 .contact-page {
