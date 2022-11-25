@@ -144,6 +144,10 @@ body {
     justify-content: center;
 }
 
+.load-cta {
+    display: none;
+}
+
 button {
     min-width: 157px;
 }
@@ -354,9 +358,9 @@ button {
     display: none;
 }
 
-label {
+/* label {
     padding-top: 10px;
-}
+} */
 
 input, textarea {
     padding: 4px;
@@ -432,6 +436,7 @@ margin: 0px auto;
         z-index: 1000;
         position: fixed;
         max-width: 100%;
+        padding: 0px;
     }
 
     .menu {
