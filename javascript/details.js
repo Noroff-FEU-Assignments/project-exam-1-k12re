@@ -26,7 +26,7 @@ async function renderPost() {
             modalImg.src = imgSrc[i].currentSrc;
         }
         
-        window.onclick = function(event) {
+        document.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none"};
         }
