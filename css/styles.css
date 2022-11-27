@@ -412,7 +412,7 @@ button {
 }
 
 .modal-content {
-    cursor: pointer;
+    /* cursor: pointer; */
     margin: auto;
     display: block;
     width: 80%;
