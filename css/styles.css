@@ -402,8 +402,8 @@ button {
     display: none;
     position: fixed;
     padding-top: 100px;
-    backdrop-filter: blur(10px) brightness(20%);
-    background-blend-mode: color;
+    backdrop-filter: brightness(20%) blur(10px) ;
+    /* background-blend-mode: color; */
     top: 0px;
     left: 0px;
     z-index: 10000;
