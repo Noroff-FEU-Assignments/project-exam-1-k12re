@@ -1,4 +1,4 @@
-const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?per_page=20&_embed";
+const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?&_embed";
 const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
 const carouselElement = document.querySelector(".carousel-element");

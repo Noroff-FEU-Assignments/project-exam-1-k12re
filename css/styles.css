@@ -16,6 +16,10 @@
     --dark-font: #000;
 }
 
+.hidden {
+    display: none;
+}
+
 *,
 *::after,
 *::before {
@@ -486,6 +490,11 @@ margin: 0px auto;
 
     main {
         padding: 16px 207px
+    }
+
+    .posts-card > .card-slim h2 {
+        margin-top: 70px;
+        padding-left: 40px;
     }
 
     .latest-big {
