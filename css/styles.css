@@ -314,6 +314,7 @@ button {
 
 .sub-nav {
     left: 25px;
+    /* top: 0px */
 }
 
 .page h2, .post-content h2 {
@@ -436,8 +437,27 @@ margin: 0px auto;
     height: 80px;
 }
 
+@media screen and (min-width: 500px) {
+    main {
+        padding: 16px 10%;
+        position: relative;
+        
+    }
+
+    .sub-nav {
+        top: 20px;
+    }
+
+    .posts-card {
+        position: relative;
+        top: -65px;
+    }
+}
+
 
 @media screen and (min-width: 1001px) {
+
+
     .navigation {
         z-index: 1000;
         position: fixed;
@@ -480,7 +500,7 @@ margin: 0px auto;
     }
 
     .sub-nav {
-        top: 132px;
+        top: 67px;
         left: 205px;
         height: 24px;
         width: 24px;
