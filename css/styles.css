@@ -345,9 +345,10 @@ button {
 .page h1, .post-content h1 {
     position: absolute;
     margin-top: 70px;
-    margin-left: 70px;
+    /* margin-left: 70px; */
     background-color: #fff;
     padding-bottom: 42px;
+    padding-left: 80px;
 }
 
 .avatar {
@@ -469,7 +470,7 @@ margin: 0px auto;
     }
 
     .sub-nav {
-        top: 25px;
+        top: 95px;
     }
 
     .posts-card, .page, .post-content {
