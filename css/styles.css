@@ -52,6 +52,10 @@ p, h1, h2 {
     top: 0px;
     background-color: #fff;
 }
+.posts-card, .page, .post-content {
+    position: relative;
+    top: -57px;
+}
 
 figure {
     margin: 0px auto;
@@ -339,7 +343,7 @@ button {
 
 .sub-nav {
     left: 25px;
-    /* top: 0px */
+    top: 79px
 }
 
 .page h1, .post-content h1 {
