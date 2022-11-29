@@ -1,14 +1,11 @@
-const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?_embed&page=1&per_page=10";
+const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?_embed&per_page=10";
 const postsContainer = document.querySelector(".posts-card");
 const postsLoadMore = document.querySelector(".posts-load-more")
-// const cta = document.querySelector(".cta");
 
-async function renderPostsList() {
+async function renderPostsList(url) {
 
     const response = await fetch(url);
     const results = await response.json();
-
-    console.log(results)
 
     postsContainer.innerHTML = "";
 
@@ -25,22 +22,18 @@ async function renderPostsList() {
                                     // }
     };
 
-
     postsLoadMore.innerHTML = `<a class="cta" href="posts-list.html">load more</a>`;
+    const cta = document.querySelector(".cta");
 
     postsLoadMore.onclick = function() {
-        // event.preventDefault();
-        const newUrl = url + "&page=2&per_page=10";
-        renderPostsList(newUrl)
-    
-        console.log(newUrl)
-    };
-
-   
-    
+        event.preventDefault();
+        const newUrl = url + "&per_page=20";
+        renderPostsList(newUrl);
+        postsLoadMore.style.display = "none";
+    }; 
 };
 
-renderPostsList();
+renderPostsList(url);
 
 
 
