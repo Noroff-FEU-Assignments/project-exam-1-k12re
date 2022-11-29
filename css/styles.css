@@ -477,10 +477,23 @@ margin: 0px auto;
         position: relative;
         top: -57px;
     }
+
+    .card-slim h2 {
+        top: 67px;
+    }
+
+    .carousel h2, .posts-slim h2 {
+        top: 0px;
+    }
 } 
 
 
 @media screen and (min-width: 1001px) {
+
+    .card-slim h2 {
+        top: 0px;
+    }
+
     .posts-card, .page {
         position: relative;
         top: -0px;
