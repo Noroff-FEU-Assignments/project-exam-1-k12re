@@ -15,7 +15,7 @@ async function renderPost() {
     
     postContainer.innerHTML = "";
 
-    postContainer.innerHTML = `<h2 class="h2">${results.title.rendered}</h2>
+    postContainer.innerHTML = `<h1 class="h1">${results.title.rendered}</h1>
                                 <p>${results.content.rendered}</p>`
 
     const imgSrc = document.querySelectorAll("figure img");    

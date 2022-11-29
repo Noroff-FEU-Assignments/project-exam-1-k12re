@@ -47,6 +47,12 @@ p, h1, h2 {
     padding-bottom: 5px;
 }
 
+.post-content h2 {
+    position: relative;
+    top: 0px;
+    background-color: #fff;
+}
+
 figure {
     margin: 0px auto;
 }
@@ -550,6 +556,9 @@ margin: 0px auto;
         padding: 0px 207px; 
     }
 
+    .padding {
+        padding-top: 57px;
+    }
 
     .posts-slim {
         max-width: 720px;
