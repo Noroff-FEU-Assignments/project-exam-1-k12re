@@ -199,6 +199,7 @@ button {
     grid-area: 1 / 1 ;
     align-self: end;
     backdrop-filter: blur(15px);
+    margin: 5px 15px 15px 15px;
 }
 
 .posts-slim {
@@ -485,6 +486,10 @@ footer {
 
     .sub-nav {
         top: 95px;
+    }
+
+    .latest-big p {
+        margin: 5px 10% 40px 10%;
     }
 
     .posts-card, .page, .post-content {
