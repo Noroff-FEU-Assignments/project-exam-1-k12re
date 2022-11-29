@@ -42,6 +42,11 @@ p, h1, h2 {
     padding: 0px 40px;
 }
 
+.posts-card .card-slim h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
 figure {
     margin: 0px auto;
 }
