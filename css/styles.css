@@ -5,7 +5,7 @@
     --dark-mode-bg: #000;
     --dark-mode-cta: #AEFF75;
     --dark-mode-cta-hover: #94ED55;
-    --h1-size: 40px;
+    --h1-size: 34px;
     --h2-size: 30px;
     --h3-size: 26px; 
     --p-size: 20px;
@@ -14,10 +14,6 @@
     --p-font: "Roboto"; 
     --light-font: #fff;
     --dark-font: #000;
-}
-
-.hidden {
-    display: none;
 }
 
 *,
@@ -31,11 +27,16 @@ img {
     object-fit: cover;
 }
 
-
 a {
     text-decoration: none;
     color: var(--dark-font);
 }
+
+.h1 {
+    font-size: var(--h1-size);
+    padding-bottom: 46px;
+}
+
 
 p, h1, h2 {
     padding: 0px 40px;
@@ -48,7 +49,6 @@ figure {
 .navigation {
     display: flex;
     justify-content: space-between;
-
 }
 
 .logo, .menu-button {
@@ -107,7 +107,6 @@ nav ul {
   
 #menu:checked ~ .menu {
     transform: translateX(0px);
-    
 }
 
 .current {
@@ -120,7 +119,6 @@ body {
     /* Change to 1640px  */
     margin: 0 auto;
     font-family: 'Roboto', 'Montserrat', sans-serif;
-    
 }
 
 .header-big {
@@ -169,8 +167,10 @@ button {
     max-width: 100%;
 }
 
-/* .latest-big h1 {
-    align-self: center;
+.latest-big h1 {
+    align-self: start;
+    position: relative;
+    top: 0px;
     grid-area: 1 / 1;
     background-color: #fff;
 }
@@ -183,7 +183,10 @@ button {
 
 .latest-big .post-author {
     align-self: start;
-} */
+    position: relative;
+    top: 155px;
+    margin-left: 40px;
+}
 
 .posts-slim {
     margin: 0px auto;
@@ -199,7 +202,7 @@ button {
     object-fit: contain;
 }
 
-.card-slim h2, .heading-card h2 {
+.card-slim h2, .heading-card h2, .latest-big .post-author, h1 {
     grid-area: 1 / 1;
     z-index: 999;
     background-color: #fff;
@@ -209,7 +212,7 @@ button {
 }
 
 .heading-card h2 {
-    margin-top: 70px;
+    margin-top: 126px;
     margin-left: 40px;
 }
 
@@ -237,6 +240,10 @@ button {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+}
+
+.carousel + h2 {
+    padding: 0px;
 }
 
 .carousel {

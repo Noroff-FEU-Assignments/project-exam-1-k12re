@@ -24,23 +24,23 @@ function renderLatest(results) {
 
     latestContainer.innerHTML = `
                                 <a class="heading-card" href="post.html?id=${results[0].id}">
-                                <h2 class="h2">Home</h2>
+                                <h1 class="h1">Home | Latest post</h2>
                                 <img class="header-big" src="${results[0]._embedded["wp:featuredmedia"][0].source_url}">
-                                <h1 class="h1">${results[0].title.rendered}</h1>
-                                <p class="post-author">${results[0]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
+                                <h2 class="h2">${results[0].title.rendered}</h1>
+                                <p class="post-author">By: ${results[0]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
                                 <p class="excerpt">${results[0].excerpt.rendered}</p>
                                 </a>`;
 };
 
 function renderCarousel(results) {
 
-    carouselContainer.innerHTML = "";
+    carouselContainer.innerHTML = ``;
     
     for (let i = 1; i <= 4; i++) {
         carouselContainer.innerHTML += `<a class="card-slim carousel-element" href="post.html?id=${results[i].id}">
                                         <h2 class="h2">${results[i].title.rendered}</h2>
                                         <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
-                                        <p class="post-author">${results[i]._embedded.author[0].name}</p>
+                                        <p class="post-author">By: ${results[i]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
                                         `
     };
 };
