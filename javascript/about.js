@@ -9,7 +9,7 @@ async function callAbout() {
 
      pageContainer.innerHTML = "";
 
-     pageContainer.innerHTML = `<h2 class="h2">${results[1].title.rendered}</h2>
+     pageContainer.innerHTML = `<h1 class="h1">${results[1].title.rendered}</h1>
                                 <p>${results[1].content.rendered}</p>`
 };
 

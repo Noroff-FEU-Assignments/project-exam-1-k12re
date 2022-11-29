@@ -24,7 +24,7 @@ function renderLatest(results) {
 
     latestContainer.innerHTML = `
                                 <a class="heading-card" href="post.html?id=${results[0].id}">
-                                <h1 class="h1">Home | Latest post</h2>
+                                <h1 class="h1">Home | Latest post</h1>
                                 <img class="header-big" src="${results[0]._embedded["wp:featuredmedia"][0].source_url}">
                                 <h2 class="h2">${results[0].title.rendered}</h1>
                                 <p class="post-author">By: ${results[0]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>

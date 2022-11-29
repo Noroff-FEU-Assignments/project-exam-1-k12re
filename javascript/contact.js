@@ -21,7 +21,7 @@ async function callContact() {
 
      pageContainer.innerHTML += "";
 
-     pageContainer.innerHTML += `<h2 class="h2">${results[0].title.rendered}</h2>
+     pageContainer.innerHTML += `<h1 class="h1">${results[0].title.rendered}</h1>
                                 <p>${results[0].content.rendered}</p>`
 };
 
