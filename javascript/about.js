@@ -15,7 +15,7 @@ async function callAbout() {
          pageContainer.innerHTML = `<h1 class="h1">${results[1].title.rendered}</h1>
                                     <p>${results[1].content.rendered}</p>`
     } catch {
-        const error = errorMsg("error", "ERROR");
+        const error = errorMsg("error");
         pageContainer.innerHTML = error;
     };
 };
