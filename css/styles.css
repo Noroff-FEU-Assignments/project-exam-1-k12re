@@ -126,7 +126,7 @@ nav ul {
 }
 
 .current {
-    display: block;
+    display: inline-block;
     font-weight: 700;
 }
 
@@ -248,7 +248,6 @@ button {
 .card-slim img, .heading-card img {
     max-width: 100%;
     grid-area: 2 / 2 / 1 / 1;
-    /* max-height: 180px; */
 }
 
 .card-slim .post-author {
@@ -263,7 +262,6 @@ button {
 .card-slim {
     overflow: hidden;
 }
-
 
 .card-slim .carousel a {
     max-width: 100%;
@@ -288,9 +286,6 @@ button {
     overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
-    /* -webkit-overflow-scrolling: hidden; */
-    /* scrollbar-width: none;
-    -ms-overflow-style: none; */
 }
 
 .carousel::-webkit-scrollbar {
@@ -312,7 +307,6 @@ button {
 }
 
 .carousel img {
-    
     max-height: 100%;
     min-width: 100%;
     object-fit: cover;
@@ -361,7 +355,6 @@ button {
 .page h1, .post-content h1 {
     position: absolute;
     margin-top: 70px;
-    /* margin-left: 70px; */
     background-color: #fff;
     padding-bottom: 42px;
     padding-left: 80px;
@@ -388,7 +381,6 @@ button {
 .req {
     color: darkred;
     display: none;
-    
 }
 
 .req-ok {
@@ -435,10 +427,6 @@ button {
 .page img {
     max-height: 80vh;
 }
-
-/* img:hover {
-    opacity: 0.8;
-} */
 
 .modal {
     display: none;
@@ -577,7 +565,6 @@ footer {
     }
 
     #menu:checked ~ .menu {
-        /* transform: translateX(-35%); */
         transform: translateX(-50%);
     }
 
@@ -598,10 +585,6 @@ footer {
         margin-top: 70px;
         padding-left: 40px;
     }
-
-    /* .posts-card h2:first-of-type {
-        margin-top: 137px;
-    } */
 
     .latest-big {
         padding: 64px 207px
@@ -628,5 +611,4 @@ footer {
         position: relative;
         top: 36px;
     }
- 
 }

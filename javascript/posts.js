@@ -16,10 +16,6 @@ async function renderPostsList(url) {
                                     <p class="post-author">${results[i]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
                                     <p class="excerpt">${results[i].excerpt.rendered}</p>
                                     </a>`;  
-                                    
-                                    // if(i === 9) {
-                                    //     break;
-                                    // }
     };
 
     postsLoadMore.innerHTML = `<a class="cta" href="posts-list.html">load more</a>`;
@@ -34,9 +30,3 @@ async function renderPostsList(url) {
 };
 
 renderPostsList(url);
-
-
-
-
-
-

@@ -5,8 +5,6 @@ async function callAbout() {
     const response = await fetch(pageUrl);
     const results = await response.json();
 
-     console.log(results);
-
      pageContainer.innerHTML = "";
 
      pageContainer.innerHTML = `<h1 class="h1">${results[1].title.rendered}</h1>

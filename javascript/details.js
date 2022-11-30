@@ -13,12 +13,12 @@ async function renderPost() {
     const response = await fetch(newUrl);
     const results = await response.json();
     
-    document.title = `Post | ${results.title.rendered}`
+    document.title = `Post | ${results.title.rendered}`;
 
     postContainer.innerHTML = "";
 
     postContainer.innerHTML = `<h1 class="h1">${results.title.rendered}</h1>
-                                <p>${results.content.rendered}</p>`
+                                <p>${results.content.rendered}</p>`;
 
     const imgSrc = document.querySelectorAll("figure img");    
 
@@ -33,13 +33,6 @@ async function renderPost() {
                 modal.style.display = "none"};
         }
     };
-    
-    console.log(modalImg.src)
-
 };
+
 renderPost();
-
-
-
-    
-

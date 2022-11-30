@@ -50,9 +50,6 @@ function renderPosts(results) {
     postsContainer.innerHTML = "";
  
     for (let i = 5; i <= 7; i++) {
-        
-        // const date = results[i].date;
-        // if (date.length < 10) date = date.substring(0, 10);
 
         postsContainer.innerHTML += `<a class="card-slim" href="post.html?id=${results[i].id}">
                                     <h2 class="h2">${results[i].title.rendered}</h2>
@@ -76,4 +73,3 @@ const right = () => {
 
 leftButton.addEventListener("click", left);
 rightButton.addEventListener("click", right);
-    
