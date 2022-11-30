@@ -41,10 +41,24 @@ p, h1, h2 {
 .error {
     border: 4px solid darkred;
     color: darkred;
-    padding: 20px;
-    margin: 300px auto;
+    padding: 10px;
+    margin: 10px auto;
     text-align: center;
-    font-size: var(--h2-size);
+    font-size: var(--h4-size);
+    text-transform: uppercase;
+}
+
+.error-big {
+    margin: 300px auto;
+}
+
+.message {
+    border: 4px solid darkgreen;
+    color: darkgreen;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: var(--h4-size);
     text-transform: uppercase;
 }
 
@@ -389,6 +403,7 @@ button {
 
 .req {
     color: darkred;
+    padding-bottom: 8px;
     display: none;
 }
 
@@ -401,7 +416,7 @@ button {
     transform: rotate(-45deg);
     grid-area: 1 / 1;
     position: relative;
-    top: -20px;
+    top: -28px;
     left: 315px;
     display: none;
 }

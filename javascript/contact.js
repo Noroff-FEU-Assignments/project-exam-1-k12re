@@ -14,7 +14,9 @@ const subjectReqOk = document.querySelector(".subject-req-ok");
 const textarea = document.querySelector(".textarea");
 const textareaReq = document.querySelector("#textarea-req");
 const textareaReqOk = document.querySelector(".textarea-req-ok");
-const contactForm = document.querySelector(".contact-form")
+const contactForm = document.querySelector(".contact-form");
+const form = document.querySelector("form")
+const messageContainer = document.querySelector(".submission");
 
 async function callContact() {
     try {
@@ -29,7 +31,6 @@ async function callContact() {
         const error = errorMsg("error", "ERROR");
         pageContainer.innerHTML = error;
     }
-
 };
 
 callContact();
@@ -67,25 +68,60 @@ function validateInput(event) {
     } else {
         textareaReq.classList.remove("req");
     }
-}; 
+};
 
-function submitForm(event) {
+name.onkeyup = function() {
+    if(name.value.length > 1) {
+        nameReqOk.style.display = "block"
+    } else {
+        nameReqOk.style.display = "none"
+    };
+};
+
+email.onkeyup = function() {
+    if(checkMail(email.value)) {
+        emailReqOk.style.display = "block"
+    } else {
+        emailReqOk.style.display = "none"
+    };
+};
+
+subject.onkeyup = function() {
+    if(subject.value.length > 7) {
+        subjectReqOk.style.display = "block"
+    } else {
+        subjectReqOk.style.display = "none"
+    };
+};
+
+textarea.onkeyup = function() {
+    if(textarea.value.length > 24) {
+        textareaReqOk.style.display = "block"
+    } else {
+        textareaReqOk.style.display = "none"
+    };
+};
+
+
+function submitForm() {
     
     event.preventDefault();
  
+    if (checkInputs(name.value, 1) && (email.value) && (subject.value, 8) && textarea.value, 25) {
+        messageContainer.innerHTML = `<div class="message">Submission success<div>`;
+        contactForm.reset();
+    } else {
+        messageContainer.innerHTML = `<div class="error">Please insert valid info<div>`;
+    }
 };
 
+function checkInputs(value, length) {
+    if(value.trim().length >= length) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 contactForm.addEventListener("submit", validateInput);
-
-// function checkOk(event) {
-//     if(name.value.length > 1) {
-//         nameReqOk.style.display = "block"
-//     } else {
-//         nameReqOk.style.display = "none"
-//     }
-
-//     console.log(onkeyup.value)
-// }
-
-
-// name.addEventListener("onkeyup", checkOk)
+contactForm.addEventListener("submit", submitForm);
