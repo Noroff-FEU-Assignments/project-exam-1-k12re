@@ -17,7 +17,9 @@ const textareaReqOk = document.querySelector(".textarea-req-ok");
 const contactForm = document.querySelector(".contact-form");
 const form = document.querySelector("form");
 const messageContainer = document.querySelector(".submission");
-const button = document.querySelector("button").disabled = true;
+const button = document.querySelector("button");
+
+button.setAttribute("disabled", "disabled");
 
 async function callContact() {
     try {
@@ -75,11 +77,11 @@ name.onkeyup = function() {
     if(name.value.length > 1) {
         nameReqOk.style.display = "block";
         nameReq.style.display = "none";
-        button.disabled = false;
+        // button.removeAttribute("disabled");
     } else {
         nameReqOk.style.display = "none";
         nameReq.style.display = "block";
-        
+
     };
 };
 
@@ -87,11 +89,11 @@ email.onkeyup = function() {
     if(checkMail(email.value)) {
         emailReqOk.style.display = "block";
         emailReq.style.display = "none";
-        button.disabled = false;
+        // button.removeAttribute("disabled");
     } else {
         emailReqOk.style.display = "none";
         emailReq.style.display = "block";
-        
+
     };
 };
 
@@ -99,11 +101,11 @@ subject.onkeyup = function() {
     if(subject.value.length > 7) {
         subjectReqOk.style.display = "block";
         subjectReq.style.display = "none";
-        button.disabled = false;
+        // button.removeAttribute("disabled");
     } else {
         subjectReqOk.style.display = "none";
         subjectReq.style.display = "block";
-        
+
     };
 };
 
@@ -111,13 +113,21 @@ textarea.onkeyup = function() {
     if(textarea.value.length > 24) {
         textareaReqOk.style.display = "block";
         textareaReq.classList.add("req");
-        button.disabled = false;
+        button.removeAttribute("disabled");
     } else {
         textareaReqOk.style.display = "none";
         textareaReq.classList.remove("req");
-        
     };
 };
+
+function checkButton() {
+    if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
+        button.removeAttribute("disabled");
+    } else {
+        button.setAttribute("disabled", "disabled");
+    }
+}
+
 
 
 function submitForm(event) {
@@ -127,7 +137,7 @@ function submitForm(event) {
     event.preventDefault();
  
     if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
-        button.disabled = false;
+        // button.disabled = false;
         messageContainer.innerHTML = `<div class="message">Your message has been sent<div>`;
         nameReqOk.style.display = "none";
         emailReqOk.style.display = "none";
@@ -135,7 +145,7 @@ function submitForm(event) {
         textareaReqOk.style.display = "none";
         form.reset();
     } else {
-        button.disabled = true;
+        // button.disabled = true;
     };
 };
 
@@ -147,7 +157,12 @@ function checkInputs(value, length) {
     }
 };
 
-// contactForm.addEventListener("submit", validateInput);
+name.addEventListener("onkeyup", checkButton);
+email.addEventListener("onkeyup", checkButton);
+subject.addEventListener("onkeyup", checkButton);
+textarea.addEventListener("onkeyup", checkButton);
+
+
 contactForm.addEventListener("submit", submitForm);
 
 

@@ -199,6 +199,10 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    background-color:#58015c7e;
+}
+
 .wp-block-quote {
     font-style: italic;
 }
