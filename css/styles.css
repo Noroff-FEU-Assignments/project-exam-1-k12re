@@ -161,12 +161,17 @@ body {
     justify-content: center;
 }
 
+.cta:hover, button:hover {
+    background-color: var(--light-mode-cta-hover);
+}
+
 .load-cta {
     display: none;
 }
 
 button {
     min-width: 157px;
+    cursor: pointer;
 }
 
 .wp-block-quote {
