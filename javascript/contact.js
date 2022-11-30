@@ -103,13 +103,13 @@ textarea.onkeyup = function() {
 };
 
 
-function submitForm() {
+function submitForm(event) {
     
     event.preventDefault();
  
-    if (checkInputs(name.value, 1) && (email.value) && (subject.value, 8) && textarea.value, 25) {
+    if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
         messageContainer.innerHTML = `<div class="message">Submission success<div>`;
-        contactForm.reset();
+        
     } else {
         messageContainer.innerHTML = `<div class="error">Please insert valid info<div>`;
     }
