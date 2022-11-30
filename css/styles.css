@@ -126,6 +126,8 @@ nav ul {
 }
 
 .current {
+    position: relative;
+    top: 8px;
     display: inline-block;
     font-weight: 700;
 }
