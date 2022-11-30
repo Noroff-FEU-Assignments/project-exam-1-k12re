@@ -19,7 +19,7 @@ async function callContact() {
     const response = await fetch(pageUrl);
     const results = await response.json();
 
-     pageContainer.innerHTML += "";
+     pageContainer.innerHTML = "";
 
      pageContainer.innerHTML += `<h1 class="h1">${results[0].title.rendered}</h1>
                                 <p>${results[0].content.rendered}</p>`
