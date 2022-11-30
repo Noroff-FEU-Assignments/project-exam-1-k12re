@@ -1,3 +1,5 @@
+import errorMsg from "./error.js";
+
 const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?&_embed";
 const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
@@ -8,12 +10,19 @@ const rightButton = document.querySelector(".right-btn");
 const buttons = document.querySelector(".arrow-buttons");
 
 async function callAPI() {
-    const response = await fetch(url);
-    const results = await response.json();
 
-     renderLatest(results);
-     renderCarousel(results);
-     renderPosts(results);
+    try {
+        const response = await fetch(url);
+        const results = await response.json();
+    
+         renderLatest(results);
+         renderCarousel(results);
+         renderPosts(results);
+    } catch {
+        const error = errorMsg("error");
+        postContainer.innerHTML = error;
+    }
+
 };
 
 callAPI();

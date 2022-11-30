@@ -1,3 +1,5 @@
+import errorMsg from "./error.js";
+
 const postContainer = document.querySelector(".post-content");
 const modal = document.getElementById("myModal");
 const modalImg = document.getElementById("modalImg");
@@ -9,16 +11,23 @@ let id = parseInt (param.get("id"));
 const newUrl = "https://autotech.kenthore.no/wp-json/wp/v2/posts/" + id;
 
 async function renderPost() {
-    
-    const response = await fetch(newUrl);
-    const results = await response.json();
-    
-    document.title = `Post | ${results.title.rendered}`;
 
-    postContainer.innerHTML = "";
+    try {
+        const response = await fetch(newUrl);
+        const results = await response.json();
+        
+        document.title = `Post | ${results.title.rendered}`;
+    
+        postContainer.innerHTML = "";
+    
+        postContainer.innerHTML = `<h1 class="h1">${results.title.rendered}</h1>
+                                    <p>${results.content.rendered}</p>`;
+    } catch {
+        const error = errorMsg("error");
+        postContainer.innerHTML = error;
+    }
+    
 
-    postContainer.innerHTML = `<h1 class="h1">${results.title.rendered}</h1>
-                                <p>${results.content.rendered}</p>`;
 
     const imgSrc = document.querySelectorAll("figure img");    
 
