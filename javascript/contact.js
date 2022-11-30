@@ -104,15 +104,17 @@ textarea.onkeyup = function() {
 
 
 function submitForm(event) {
+
+    messageContainer.innerHTML = ``;
     
     event.preventDefault();
  
     if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
-        messageContainer.innerHTML = `<div class="error">Please insert valid info<div>`;
-    } else {
-        messageContainer.innerHTML = `<div class="message">Submission success<div>`;
+        messageContainer.innerHTML = `<div class="message">Your message has been sent<div>`;
         form.reset();
-    }
+    } else {
+        messageContainer.innerHTML = `<div class="error">Please insert valid info<div>`;
+    };
 };
 
 function checkInputs(value, length) {
