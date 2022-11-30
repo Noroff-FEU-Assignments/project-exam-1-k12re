@@ -123,7 +123,7 @@ function checkInputs(value, length) {
     } else {
         return false;
     }
-}
+};
 
 contactForm.addEventListener("submit", validateInput);
 contactForm.addEventListener("submit", submitForm);

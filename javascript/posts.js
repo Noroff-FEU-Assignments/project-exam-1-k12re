@@ -29,7 +29,7 @@ async function renderPostsList(url) {
     postsLoadMore.innerHTML = `<a class="cta" href="posts-list.html">load more</a>`;
     const cta = document.querySelector(".cta");
 
-    postsLoadMore.onclick = function() {
+    postsLoadMore.onclick = function(event) {
         event.preventDefault();
         const newUrl = url + "&per_page=20";
         renderPostsList(newUrl);
