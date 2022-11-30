@@ -13,6 +13,8 @@ async function renderPost() {
     const response = await fetch(newUrl);
     const results = await response.json();
     
+    document.title = `Post | ${results.title.rendered}`
+
     postContainer.innerHTML = "";
 
     postContainer.innerHTML = `<h1 class="h1">${results.title.rendered}</h1>

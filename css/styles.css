@@ -2,9 +2,6 @@
     --light-mode-bg: #fff;
     --light-mode-cta: #57015C;
     --light-mode-cta-hover: #91018C;
-    --dark-mode-bg: #000;
-    --dark-mode-cta: #AEFF75;
-    --dark-mode-cta-hover: #94ED55;
     --h1-size: 32px;
     --h2-size: 28px;
     --h3-size: 26px; 
@@ -131,7 +128,6 @@ nav ul {
 
 body {
     max-width: 1001px;
-    /* Change to 1640px  */
     margin: 0 auto;
     font-family: 'Roboto', 'Montserrat', sans-serif;
 }
@@ -154,7 +150,7 @@ body {
     color: var(--light-font);
     margin: 20px 60px;
     padding: 12px 0px;
-    /* min-height: 50px; */
+    border: #57015C;
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
