@@ -55,7 +55,11 @@ p, h1, h2 {
 }
 
 figure {
-    margin: 0px auto;
+    margin: inherit;
+}
+
+.wp-block-media-text_media {
+    margin: 0px;
 }
 
 .navigation {
@@ -97,8 +101,8 @@ nav ul {
 }
 
 .menu a:hover {
-    display: block;
-    font-weight: 700;
+    background-color: #fff;
+    filter: invert();
 }
 
 .menu {
@@ -122,8 +126,8 @@ nav ul {
 }
 
 .current {
-    background-color: #fff;
-    filter: invert();
+    display: block;
+    font-weight: 700;
 }
 
 body {
@@ -332,6 +336,11 @@ button {
     justify-content: space-between;
 }
 
+.arrow:hover {
+    border-left-color: var(--light-mode-cta-hover);
+    border-top-color: var(--light-mode-cta-hover);
+}
+
 .left-btn {
     left: 0px;
     transform: rotate(-45deg);
@@ -396,13 +405,9 @@ button {
     display: none;
 }
 
-/* label {
-    padding-top: 10px;
-} */
-
 input, textarea {
     padding: 4px;
-    /* margin: 14px 0px; */
+    margin-bottom: 8px;
 }
 
 .contact-form {
@@ -436,13 +441,11 @@ button {
 } */
 
 .modal {
-    
     display: none;
     position: fixed;
     padding-top: 100px;
     backdrop-filter: brightness(20%) blur(10px);
     -webkit-backdrop-filter: brightness(20%) blur(10px);
-    /* background-blend-mode: color; */
     top: 0px;
     left: 0px;
     z-index: 10000;
@@ -451,11 +454,9 @@ button {
 }
 
 .modal-content {
-    /* cursor: pointer; */
     margin: auto;
     display: block;
     width: 80%;
-    
 }
 
 footer {
