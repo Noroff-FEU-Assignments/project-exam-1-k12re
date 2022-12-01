@@ -511,6 +511,33 @@ footer {
     animation: spin 2s linear infinite;
 }
 
+.knob {
+    bottom: -28px;
+    left: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #57015C;
+    position: relative;
+    z-index: 10000;
+}
+
+/* .knob-background {
+    bottom: -25px;
+    left: -30px;
+    height: 36px;
+    width: 60px;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #fafafa;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo-white {
+    position: absolute;
+    height: 57px;
+} */
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
