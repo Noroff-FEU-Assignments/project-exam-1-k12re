@@ -3,11 +3,11 @@ import errorMsg from "./error.js";
 const url = `https://autotech.kenthore.no/wp-json/wp/v2/posts?&_embed`;
 const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
-const carouselElement = document.querySelector(".carousel-element");
+// const carouselElement = document.querySelector(".carousel-element");
 const postsContainer = document.querySelector(".posts-slim");
 const leftButton = document.querySelector(".left-btn");
 const rightButton = document.querySelector(".right-btn");
-const buttons = document.querySelector(".arrow-buttons");
+// const buttons = document.querySelector(".arrow-buttons");
 
 async function callAPI() {
 

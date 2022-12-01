@@ -232,8 +232,9 @@ button:disabled {
 .latest-big p {
     grid-area: 1 / 1 ;
     align-self: end;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: #fff;
+    /* backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); */
     margin: 5px 15px 15px 15px;
 }
 
