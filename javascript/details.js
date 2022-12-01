@@ -8,7 +8,7 @@ const queryString = document.location.search;
 let param = new URLSearchParams(queryString);
 let id = parseInt (param.get("id"));
 
-const newUrl = "https://autotech.kenthore.no/wp-json/wp/v2/posts/" + id;
+const newUrl = `https://autotech.kenthore.no/wp-json/wp/v2/posts/` + id;
 
 async function renderPost() {
 
@@ -25,7 +25,7 @@ async function renderPost() {
     } catch {
         const error = errorMsg("error");
         postContainer.innerHTML = error;
-    }
+    };
     
 
 

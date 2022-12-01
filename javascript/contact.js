@@ -1,7 +1,7 @@
 import errorMsg from "./error.js";
 
-const pageUrl = "https://autotech.kenthore.no/wp-json/wp/v2/pages";
-const pageContainer = document.querySelector(".page")
+const pageUrl = `https://autotech.kenthore.no/wp-json/wp/v2/pages`;
+const pageContainer = document.querySelector(".page");
 const name = document.querySelector(".name");
 const nameReq = document.querySelector("#name-req");
 const nameReqOk = document.querySelector(".name-req-ok");
@@ -26,7 +26,7 @@ async function callContact() {
         const response = await fetch(pageUrl);
         const results = await response.json();
     
-         pageContainer.innerHTML = "";
+         pageContainer.innerHTML = ``;
     
          pageContainer.innerHTML += `<h1 class="h1">${results[0].title.rendered}</h1>
                                     <p>${results[0].content.rendered}</p>`

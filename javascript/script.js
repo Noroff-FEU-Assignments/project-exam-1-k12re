@@ -1,6 +1,6 @@
 import errorMsg from "./error.js";
 
-const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?&_embed";
+const url = `https://autotech.kenthore.no/wp-json/wp/v2/posts?&_embed`;
 const latestContainer = document.querySelector(".latest-big");
 const carouselContainer = document.querySelector(".carousel");
 const carouselElement = document.querySelector(".carousel-element");
@@ -21,7 +21,7 @@ async function callAPI() {
     } catch {
         const error = errorMsg("error");
         postContainer.innerHTML = error;
-    }
+    };
 
 };
 
@@ -29,10 +29,9 @@ callAPI();
 
 function renderLatest(results) {
     
-    latestContainer.innerHTML = "";
+    latestContainer.innerHTML = ``;
 
-    latestContainer.innerHTML = `
-                                <a class="heading-card" href="post.html?id=${results[0].id}">
+    latestContainer.innerHTML = `<a class="heading-card" href="post.html?id=${results[0].id}">
                                 <h1 class="h1">Home | Latest post</h1>
                                 <img class="header-big" src="${results[0]._embedded["wp:featuredmedia"][0].source_url}">
                                 <h2 class="h2">${results[0].title.rendered}</h1>
@@ -56,7 +55,7 @@ function renderCarousel(results) {
 
 function renderPosts(results) {
 
-    postsContainer.innerHTML = "";
+    postsContainer.innerHTML = ``;
  
     for (let i = 5; i <= 7; i++) {
 

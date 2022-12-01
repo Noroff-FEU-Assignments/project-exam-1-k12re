@@ -1,6 +1,6 @@
 import errorMsg from "./error.js";
 
-const url = "https://autotech.kenthore.no/wp-json/wp/v2/posts?_embed&per_page=10";
+const url = `https://autotech.kenthore.no/wp-json/wp/v2/posts?_embed&per_page=10`;
 const postsContainer = document.querySelector(".posts-card");
 const postsLoadMore = document.querySelector(".posts-load-more")
 
@@ -23,7 +23,7 @@ async function renderPostsList(url) {
     } catch {
         const error = errorMsg("error");
         postContainer.innerHTML = error;
-    }
+    };
 
 
     postsLoadMore.innerHTML = `<a class="cta" href="posts-list.html">load more</a>`;
