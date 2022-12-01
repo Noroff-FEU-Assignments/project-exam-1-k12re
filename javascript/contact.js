@@ -81,7 +81,7 @@ name.onkeyup = function() {
     } else {
         nameReqOk.style.display = "none";
         nameReq.style.display = "block";
-
+        // button.setAttribute("disabled", "disabled");
     };
 };
 
@@ -93,7 +93,7 @@ email.onkeyup = function() {
     } else {
         emailReqOk.style.display = "none";
         emailReq.style.display = "block";
-
+        // button.setAttribute("disabled", "disabled");
     };
 };
 
@@ -105,7 +105,7 @@ subject.onkeyup = function() {
     } else {
         subjectReqOk.style.display = "none";
         subjectReq.style.display = "block";
-
+        // button.setAttribute("disabled", "disabled");
     };
 };
 
@@ -117,18 +117,19 @@ textarea.onkeyup = function() {
     } else {
         textareaReqOk.style.display = "none";
         textareaReq.classList.remove("req");
+        button.setAttribute("disabled", "disabled");
     };
 };
 
 function checkButton() {
-    if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
+    if (checkInputs(name.value, 1) && checkInputs(email.value, true) && checkInputs(subject.value, 8) && checkInputs(textarea.value, 25)) {
         button.removeAttribute("disabled");
+        return true
     } else {
         button.setAttribute("disabled", "disabled");
+        return false
     }
 }
-
-
 
 function submitForm(event) {
 
@@ -136,8 +137,8 @@ function submitForm(event) {
     
     event.preventDefault();
  
-    if (checkInputs(name.value, 1) && (email.value, true) && (subject.value, 8) && textarea.value, 25) {
-        // button.disabled = false;
+    if (checkInputs(name.value, 1) && checkInputs(email.value, true) && checkInputs(subject.value, 8) && checkInputs(textarea.value, 25)) {
+        button.setAttribute("disabled", "disabled");
         messageContainer.innerHTML = `<div class="message">Your message has been sent<div>`;
         nameReqOk.style.display = "none";
         emailReqOk.style.display = "none";
@@ -145,7 +146,7 @@ function submitForm(event) {
         textareaReqOk.style.display = "none";
         form.reset();
     } else {
-        // button.disabled = true;
+        button.removeAttribute("disabled");
     };
 };
 
@@ -162,8 +163,6 @@ email.addEventListener("onkeyup", checkButton);
 subject.addEventListener("onkeyup", checkButton);
 textarea.addEventListener("onkeyup", checkButton);
 
-
 contactForm.addEventListener("submit", submitForm);
 
-
-console.log(button.disabled);
+console.log(checkInputs);
