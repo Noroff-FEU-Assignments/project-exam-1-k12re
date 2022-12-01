@@ -81,11 +81,11 @@ subject.onkeyup = function() {
 textarea.onkeyup = function() {
     if(textarea.value.length > 24) {
         textareaReqOk.style.display = "block";
-        textareaReq.classList.add("req");
+        textareaReq.style.display = "none";
         button.removeAttribute("disabled");
     } else {
         textareaReqOk.style.display = "none";
-        textareaReq.classList.remove("req");
+        textareaReq.style.display = "block";
         button.setAttribute("disabled", "disabled");
     };
 };
