@@ -33,7 +33,7 @@ async function callContact() {
     } catch {
         const error = errorMsg("error", "ERROR");
         pageContainer.innerHTML = error;
-    }
+    };
 };
 
 callContact();
@@ -44,44 +44,15 @@ function checkMail(email) {
     return mailPattern;
 };
 
-// function validateInput(event) {
-
-//     event.preventDefault();
-
-//     if(name.value.length > 1) {
-//         nameReq.style.display = "none";
-//     } else {
-//         nameReq.style.display = "block";
-//     };
-
-//     if(checkMail(email.value) === true) {
-//         emailReq.style.display = "none";
-//     } else {
-//         emailReq.style.display = "block";
-//     };
-
-//     if(subject.value.length > 7) {
-//         subjectReq.style.display = "none";
-//     } else {
-//         subjectReq.style.display = "block";
-//     }
-
-//     if(textarea.value.length > 24) {
-//         textareaReq.classList.add("req");
-//     } else {
-//         textareaReq.classList.remove("req");
-//     }
-// };
-
 name.onkeyup = function() {
-    if(name.value.length > 1) {
+    if(name.value.length > 4) {
+        messageContainer.innerHTML = ``;
         nameReqOk.style.display = "block";
         nameReq.style.display = "none";
-        // button.removeAttribute("disabled");
     } else {
         nameReqOk.style.display = "none";
         nameReq.style.display = "block";
-        // button.setAttribute("disabled", "disabled");
+        button.setAttribute("disabled", "disabled");
     };
 };
 
@@ -89,23 +60,21 @@ email.onkeyup = function() {
     if(checkMail(email.value)) {
         emailReqOk.style.display = "block";
         emailReq.style.display = "none";
-        // button.removeAttribute("disabled");
     } else {
         emailReqOk.style.display = "none";
         emailReq.style.display = "block";
-        // button.setAttribute("disabled", "disabled");
+        button.setAttribute("disabled", "disabled");
     };
 };
 
 subject.onkeyup = function() {
-    if(subject.value.length > 7) {
+    if(subject.value.length > 14) {
         subjectReqOk.style.display = "block";
         subjectReq.style.display = "none";
-        // button.removeAttribute("disabled");
     } else {
         subjectReqOk.style.display = "none";
         subjectReq.style.display = "block";
-        // button.setAttribute("disabled", "disabled");
+        button.setAttribute("disabled", "disabled");
     };
 };
 
@@ -124,12 +93,10 @@ textarea.onkeyup = function() {
 function checkButton() {
     if (checkInputs(name.value, 1) && checkInputs(email.value, true) && checkInputs(subject.value, 8) && checkInputs(textarea.value, 25)) {
         button.removeAttribute("disabled");
-        return true
     } else {
         button.setAttribute("disabled", "disabled");
-        return false
-    }
-}
+    };
+};
 
 function submitForm(event) {
 
@@ -155,14 +122,11 @@ function checkInputs(value, length) {
         return true;
     } else {
         return false;
-    }
+    };
 };
 
 name.addEventListener("onkeyup", checkButton);
 email.addEventListener("onkeyup", checkButton);
 subject.addEventListener("onkeyup", checkButton);
 textarea.addEventListener("onkeyup", checkButton);
-
 contactForm.addEventListener("submit", submitForm);
-
-console.log(checkInputs);
