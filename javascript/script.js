@@ -18,11 +18,12 @@ async function callAPI() {
          renderLatest(results);
          renderCarousel(results);
          renderPosts(results);
+         console.log(results)
     } catch {
         const error = errorMsg("error");
         postContainer.innerHTML = error;
     };
-
+    
 };
 
 callAPI();
@@ -33,7 +34,7 @@ function renderLatest(results) {
 
     latestContainer.innerHTML = `<a class="heading-card" href="post.html?id=${results[0].id}">
                                 <h1 class="h1">Home | Latest post</h1>
-                                <img class="header-big" src="${results[0]._embedded["wp:featuredmedia"][0].source_url}">
+                                <img class="header-big" src="${results[0]._embedded["wp:featuredmedia"][0].source_url}" alt"${results[0]._embedded["wp:featuredmedia"][0].alt_text}">
                                 <h2 class="h2">${results[0].title.rendered}</h1>
                                 <p class="post-author">By: ${results[0]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
                                 <p class="excerpt">${results[0].excerpt.rendered}</p>
@@ -47,7 +48,7 @@ function renderCarousel(results) {
     for (let i = 1; i <= 4; i++) {
         carouselContainer.innerHTML += `<a class="card-slim carousel-element" href="post.html?id=${results[i].id}">
                                         <h2 class="h2">${results[i].title.rendered}</h2>
-                                        <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
+                                        <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}" alt"${results[i]._embedded["wp:featuredmedia"][0].alt_text}">
                                         <p class="post-author">By: ${results[i]._embedded.author[0].name} | ${results[0].date.substring(0, 10)}</p>
                                         `
     };
@@ -61,7 +62,7 @@ function renderPosts(results) {
 
         postsContainer.innerHTML += `<a class="card-slim" href="post.html?id=${results[i].id}">
                                     <h2 class="h2">${results[i].title.rendered}</h2>
-                                    <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}">
+                                    <img class="card-slim" src="${results[i]._embedded["wp:featuredmedia"][0].source_url}" alt"${results[i]._embedded["wp:featuredmedia"][0].alt_text}">
                                     <p class="post-author">By: ${results[i]._embedded.author[0].name} | ${results[i].date.substring(0, 10)}</p>
                                     <p class="excerpt">${results[i].excerpt.rendered}</p>
                                     </a>`;
