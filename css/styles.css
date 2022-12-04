@@ -180,6 +180,10 @@ body {
     top: 0px
 }
 
+h2 {
+    font-family: var(--heading-font);
+}
+
 .cta, button {
     display: flex;
     background-color: var(--light-mode-cta);
