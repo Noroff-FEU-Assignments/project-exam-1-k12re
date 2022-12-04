@@ -35,6 +35,13 @@ a {
     padding-bottom: 46px;
 }
 
+.h1-posts {
+    position: absolute;
+    top: -10px;
+    left: 164px;
+    font-size: var(--h1-size);
+}
+
 p, h1, h2 {
     padding: 0px 40px;
 }
@@ -529,6 +536,10 @@ footer {
         top: 95px;
     }
 
+    .h1-posts {
+        top: -126px;
+    }
+
     .latest-big p {
         margin: 5px 10% 40px 10%;
     }
@@ -548,6 +559,10 @@ footer {
 } 
 
 @media screen and (min-width: 1001px) {
+
+    .h1-posts {
+        top: -58px;
+    }
 
     .card-slim h2 {
         top: 0px;
