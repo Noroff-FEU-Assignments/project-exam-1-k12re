@@ -27,8 +27,6 @@ async function renderPost() {
         postContainer.innerHTML = error;
     };
     
-
-
     const imgSrc = document.querySelectorAll("figure img");    
 
     for (let i = 0; i < imgSrc.length; i++) {
@@ -40,7 +38,7 @@ async function renderPost() {
         document.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none"};
-        }
+        };
     };
 };
 

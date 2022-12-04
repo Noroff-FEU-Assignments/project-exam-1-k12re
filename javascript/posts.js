@@ -25,7 +25,6 @@ async function renderPostsList(url) {
         postContainer.innerHTML = error;
     };
 
-
     postsLoadMore.innerHTML = `<a class="cta" href="posts-list.html">load more</a>`;
     const cta = document.querySelector(".cta");
 

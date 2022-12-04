@@ -7,6 +7,7 @@
     --h3-size: 26px; 
     --p-size: 20px;
     --p-post-author: 16px;
+    --small-text: 12px;
     --heading-font: "Montserrat";
     --p-font: "Roboto"; 
     --light-font: #fff;
@@ -72,7 +73,7 @@ p, h1, h2 {
 .post-content h2 {
     position: relative;
     top: 0px;
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
 }
 .posts-card, .page, .post-content {
     position: relative;
@@ -105,14 +106,14 @@ figure {
 nav, nav a, nav ul {
     font-family: var(--heading-font);
     font-size: var(--h1-size);
-    color: #000;
+    color: var(--dark-font);
     text-decoration: none;
     list-style: none;
     text-align: end;
 }
 
 nav ul {
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
 }
 
 .sub-nav {
@@ -126,13 +127,12 @@ nav ul {
 }
 
 .menu a:hover {
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
     filter: invert();
 }
 
 .menu {
     margin-top: 67px;
-    background-color: #fff;
 }
 
 .menu {
@@ -179,7 +179,7 @@ body {
     color: var(--light-font);
     margin: 20px 60px;
     padding: 12px 0px;
-    border: #57015C;
+    border: var(--light-mode-cta);
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
@@ -222,7 +222,7 @@ button:disabled {
     position: relative;
     top: 0px;
     grid-area: 1 / 1;
-    background-color: #fff;
+    background-color: var(--light-mode-bg)
 }
 
 .latest-big h1 {
@@ -232,9 +232,7 @@ button:disabled {
 .latest-big p {
     grid-area: 1 / 1 ;
     align-self: end;
-    background-color: #fff;
-    /* backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px); */
+    background-color: var(--light-mode-bg);
     margin: 5px 15px 15px 15px;
 }
 
@@ -244,7 +242,7 @@ button:disabled {
 }
 
 .card-slim:hover {
-    background-color: #fafafa;
+    background-color: #e9e9e9;
 }
 
 .card-slim {
@@ -255,7 +253,7 @@ button:disabled {
 .card-slim h1, .heading-card h1, .latest-big .post-author, h1 {
     grid-area: 1 / 1;
     z-index: 999;
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
     max-height: 40px;
     max-width: fit-content;
     padding-bottom: 42px;
@@ -285,7 +283,7 @@ button:disabled {
     align-self: end;
     max-height: 30px;
     max-width: fit-content;
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
     padding: 4px;
 }
 
@@ -385,7 +383,7 @@ button:disabled {
 .page h1, .post-content h1 {
     position: absolute;
     margin-top: 70px;
-    background-color: #fff;
+    background-color: var(--light-mode-bg);
     padding-bottom: 40px;
     padding-left: 80px;
 }
@@ -492,12 +490,13 @@ footer {
     margin: 0px auto;
     width: 80px;
     height: 80px;
-    color: #fff;
+    color: var(--light-font);
 }
 
 .footer-text {
+    font-size: var(--small-text);
     align-self: center;
-    color: #fff;
+    color: var(--light-font);
     padding: 0px 10px;
 }
 
@@ -505,38 +504,11 @@ footer {
     margin: auto;
     border: 10px solid var(--light-mode-cta);
     border-radius: 50%;
-    border-bottom-color: #fff;
+    border-bottom-color: var(--light-mode-bg);
     width: 60px;
     height: 60px;
     animation: spin 2s linear infinite;
 }
-
-.knob {
-    bottom: -28px;
-    left: 0px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #57015C;
-    position: relative;
-    z-index: 10000;
-}
-
-/* .knob-background {
-    bottom: -25px;
-    left: -30px;
-    height: 36px;
-    width: 60px;
-    border-radius: 25px 25px 25px 25px;
-    background-color: #fafafa;
-    position: relative;
-    z-index: 1000;
-}
-
-.logo-white {
-    position: absolute;
-    height: 57px;
-} */
 
 @keyframes spin {
     0% {
@@ -575,7 +547,6 @@ footer {
     }
 } 
 
-
 @media screen and (min-width: 1001px) {
 
     .card-slim h2 {
@@ -597,7 +568,6 @@ footer {
     .menu {
         transform: translateX(800px);
         left: 600px;
-        /* transform: translateX(100px); */
         margin-top: 10px;
         z-index: 1000;
     }
