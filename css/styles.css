@@ -214,6 +214,11 @@ button:disabled {
     font-style: italic;
 }
 
+.wp-block-post-author__avatar {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
 .latest-big {
     margin: 0px auto;
     max-width: 100%;
